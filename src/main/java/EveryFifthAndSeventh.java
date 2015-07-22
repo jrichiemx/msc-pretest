@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -5,9 +6,17 @@ import java.util.List;
  */
 public class EveryFifthAndSeventh {
 
-    public static List<T> getListOfFifthsAndSevenths(Object[] arrayOfObjects){
-        T (arrayOfObjects[0].getClass())
-        List<>
+    public static <T> List<T> getListOfFifthsAndSevenths( T[] arrayOfObjects){
+        List<T> listOfFifthsAndSevents= new ArrayList<>();
+
+        for(int i=1; i< arrayOfObjects.length; i++){
+            if(i%5 == 0)
+                listOfFifthsAndSevents.add((T) arrayOfObjects[i]);
+            else if (i%7 == 0)
+                listOfFifthsAndSevents.add((T) arrayOfObjects[i]);
+        }
+
+        return listOfFifthsAndSevents;
 
     }
 }
